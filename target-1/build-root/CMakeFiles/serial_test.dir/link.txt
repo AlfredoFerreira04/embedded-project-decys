@@ -1,0 +1,1 @@
+/home/alfredo/Repositories/gnat-x86_64-linux-15.1.0-2/bin/c++ CMakeFiles/serial_test.dir/serial_pruning.cpp.o -o serial_test  libserial.a -lrt -lpthread 

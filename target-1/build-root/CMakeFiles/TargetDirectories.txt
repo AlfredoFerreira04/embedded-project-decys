@@ -1,0 +1,4 @@
+/home/alfredo/Repositories/embedded-project-decys/target-1/build-root/CMakeFiles/serial.dir
+/home/alfredo/Repositories/embedded-project-decys/target-1/build-root/CMakeFiles/serial_test.dir
+/home/alfredo/Repositories/embedded-project-decys/target-1/build-root/CMakeFiles/edit_cache.dir
+/home/alfredo/Repositories/embedded-project-decys/target-1/build-root/CMakeFiles/rebuild_cache.dir

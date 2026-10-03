@@ -1,0 +1,2 @@
+Testing all 676 two-character prefixes with suffix aaaaaaaaaaa (20 repetitions each)
+Raw samples: type,candidate,attempt,baseline_us,candidate_us,delta_us
