@@ -1,0 +1,194 @@
+~/Repositories/embedded-project-decys/target-2/memory_dumps  main ?1 ▓▒░ file memory_0.bin memory_1.bin memory_2.bin   ░▒▓ ✔  14:50:07 
+
+memory_0.bin: Unicode text, UTF-8 text, with very long lines (12839)
+memory_1.bin: Unicode text, UTF-8 text, with very long lines (1025), with CRLF line terminators
+memory_2.bin: Unicode text, UTF-8 text, with very long lines (931)
+
+
+
+ ~/Repositories/embedded-project-decys/target-2/memory_dumps  main ?1 ▓▒░ wc -c memory_0.bin memory_1.bin memory_2.bin   ░▒▓ ✔  14:50:29 
+
+ 69995 memory_0.bin
+  3077 memory_1.bin
+ 60734 memory_2.bin
+133806 total
+
+
+
+ ~/Repositories/embedded-project-decys/target-2/memory_dumps  main ?1 ▓▒░ sha256sum memory_0.bin memory_1.bin memory_2.bin   ░▒▓ ✔  14:50:37 
+
+d39561e498953947074fbd8a1268ee8ac2778e853f6c320efeb815aff278a806  memory_0.bin
+870eddce5dd6ed5a3d4bcf8ad8740bd1f2badb8e459eef815d5418284ae3a2cc  memory_1.bin
+2f98842cb3063d024132d0da6884950b70950e00f9d79ac16f20fb60f06e2a42  memory_2.bin
+ ~/Repositories/embedded-project-decys/target-2/memory_dumps  main ?1 ▓▒░ strings -a memory_0.bin   ░▒▓ ✔  14:50:46 
+Alan: Dan, we need to talk about the vending machine's connection to the Command and Control center.
+Dan: Oh, you mean the snack dispenser? Yeah, no problem! I just wired it to start whenever someone kicks it twice. It
+s pretty foolproof!
+Alan: No, Dan. It's not foolproof
+it's just regular fool. Listen, this is serious. We need to securely connect the vending machine to the Command and Control Center, not a bunch of hungry people
+s feet. Security guys say there needs to be a private key and an encrypted secret involved.
+Dan: Oh! I thought we just needed like, a password. You know, "danprzjzumfgn"?
+Alan: *facepalm* No! This isn
+t a password for your Wi-Fi router. The private key and signature need to be stored safely. They cannot be hardcoded in all vending machines. 
+Dan: Wait
+ can't we just print the key on a label and stick it inside the machine? No one looks in there except the maintenance guy
+ and maybe Steve from IT when he's low on snacks.
+Alan: Dan, do you understand the concept of security? You don
+t leave the stuff lying around like it
+s a post-it note with your Netflix login. It has to be encrypted and stored securely!
+Dan: Ohhh
+ so like, maybe I put it in a really tiny font? So tiny that hackers can
+t even see it?
+Alan: ... No, Dan. You
+re going to pair the signature with a nonce
+which is a number that is used only once. You know what that means, right?
+Dan: Oh yeah, I know. Like those single-use ketchup packets! Very eco-unfriendly, but I get it.
+Alan: ... It
+s not like ketchup packets. You need to generate a new nonce every time the machine communicates with the Control Center. And it needs to be done by a very secure function
+one that YOU are supposed to already be developing.
+Dan: Ohhh! Right, right. Wait... can I use Google to find that secure function? There's probably one on StackOverflow.
+Alan: NO!! You are writing this function yourself! You know, as in actually developing it. It's a security measure, not something you copy-paste from a random forum. In-house is always better, so no one knows how to hack it!
+Dan: Oh! Okay! So
+ once I generate the nonce thingy, I just
+ send it to the C&C with the signature thingy? Like an e-mail or something?
+Alan: The nonce is generated in real time. It
+s like a handshake
+only instead of shaking hands, the vending machine and the Control Center exchange encrypted gibberish that hackers can
+t understand. The nonce helps somehow with that gibberish.
+Dan: Ah, so they
+re speaking in secret snack code! Got it. This
+ll be easy. I
+ll have it done in an hour!
+Alan: That
+s what you said about the coffee machine, and now it only dispenses boiling water.
+Dan: Well, technically, that
+s still coffee, right?
+Dan: Oh right, check out the key and signature crypto guy Carl sent me, they look so cool and mysterious
+Dan: The key "MIIEowIBAAKCAQEA3LFgAviOrx84nqqqV5aPzjDW2j1y6GsPhPfXfPuNez1dLAAU/3dlTMH4QrL6Rvtufj3H9zvDaOk8vVN7bIGMbpte0xlLPYK28utCCe0ciVP76LkJnXgVB3o+y9eelHrW+71xGLcPWMCuq1342CBc/nkVxiYf3IcAQ3/4ZHcpvhJhq/MKLkB4i04FEOI73+D4j4FJRFTM48V1m47Ib2SflCno6BIbP1uYAWkTWyCh1equejSGFvRWifyx0wNdb8HW5ebpngUgsiYrm5Cu6vCQNCOBw0sCFlT8K/6Zi+NnKj3TejS7Y6XIwAkMzI28DBNEJLOKYX8ioz5xelS9kpDiCwIDAQABAoIBAB7wQND5zmrveg0ISOwRf+R8hUpADhFWHO1bn1p2m214+0xVUJxFvS5HDQowtBRqYCGTgKqAttLIy8qQ3v8lpC3HW0JFy/36CrLAV1gz5Om9m9WSxy3LrUsIkLAb8K/JDsVo1+eKljyvem0stdt6of7Ms8g9BP9x75AG6ygOaowqHdRMVEVIV1nZbomhbO6Hadb4NqoPePXYMrQ095jJ/A4dfv95NKaKiFm9cFgO5NyBeJ60TaBx2XgfAibLE/j/XDvvcKQNVHqgx2fvm9NrSGrsaDaJKz6NuCrJ7DnIj7CSvbAxDlONvRMkedD8xQv9c4Pe6JS9qMtWgqlZWWPULA0CgYEA9ygkqBrDi+PsHbb5iOz4lhB5UmWT42SOrGFxBKEPl1APgVWbSav8vlUlRob82TYDd3lDPz0LqQc7Q6jc8c2zUJY7kqrYUADZcER1nzC3BL3GZvyG1BGSLtZd0phfljJAWIv6TLuNWsPDUjbfmAbYA/LqU7ai+ndTLDK5DCzWad0CgYEA5JbVNTZJdLxs/yjCDMwjrtGeTO8pX5p15YL2N6vK4x7gH71ecrvdmzxz5BTKm3ziA8VbimaC0tJHqEQ5bh/vz+fUVt3VA9oZa11f631WyuONrnwbsU6ry1P7R2JkOCUo19hDwJLVW4dlSTGBx8UE38a4jWA4PwxFYfSkmk6goQcCgYEAvmocC7NK8myvzZjZmQdQ4XRhs/x0Op2PWflcdD+N3nqc53zHvbOWbiD1Lefzx3jYpOQ0zfS/FgNvQkpHprderfiAfxfGvaRZ4SetIu8KIcn/n/pv+dRrtlALSqOACRw//LgjJ5jbZ5Eo2x9RljO3mxs8MzCjUao61vNhI6MrsbUCgYBbUVpJUK+Vn/SXFmw2+pJCs2De8SgBFk6E6oV8BfgeNWZpp5gEk8Ja0pKlihzKcuBDi2MfbgZTPEf+E4sx0DZYQw/Tx/jh+g3vkzTPeZnjoXYnP1M8yOXea2VVxhutRkMDv1SJqN7tGrC+xbVH3hAtaVCuwcKWhUtub3IWZtTKnwKBgDD1BlkGbHptv0a91Ha/DMjKAiF66tiSKfnwxIjI2O7XHsveV/ycnvk1gILZrUElq57oYPmTThF5NQtXyK6h788h88e6gTWlRacloVNcd655U4wG0IdI07o0YCawro9RJMCMWze9f4rECnLJocFLhwqwtbQm2baHHC0omTIkhaZt"
+Dan: The very secret signature. "UQVWaw374/fIdua7iphFNbSEMtAvMpiXHzeg4nDP8x+Tmt/gy20eWUT6ZCddpwDlTKeOUR1L9fUt+4bBfU/mgB4o+NfszJR1rQtruCC2vfXFibDmQh4FRHKuEdGjvHvvm0KFq5uqh2umzK5mWm1RJ/KbC70UDXd5dsUogA9lhYFPj+QkQG8RX8cV+U4o2Mf+t7lHvRAeku9SBiYkBvNGzts7ZH8o/3dA0Fdqc8SXj9lbfBJmfuVQEJmMWnmVZ8/3VTAL4s84ff0Bx4EsL1vFVl6UzIrGh5dIXurEO77MBpcgYepIEoV7Aac4yO8mJf+lb5eBa33LsWAhoctKye+K4A=="
+Dan: It's weird though, I don't see "Signed-By" anywhere.... Oooh, maybe thats the secret part
+Alan: Just... make sure they are stored properly, whatever that means. And make sure the nonce is generated RANDOMLY! And for the love of God...
+Alan: STOP SAVING OUR CONVERSATIONS IN COMMENTS, CODE IS NOT YOUR DIARY
+Dan: No problem, boss! But just curious
+ what exactly *is* the Control and Command Center going to tell the vending machine? Like... which candy is most popular?
+* Alan is no longer available to chat with *
+### END USER LICENSE AGREEMENT
+#### **Congratulations, Thirsty Friend!**
+By interacting with this vending machine, you
+re about to enter into the most riveting contract of your life. No, really
+s exciting, trust us. You thought you were just getting a soda or snack, but surprise! You
+ve just stumbled into a legally binding agreement with this majestic piece of technology.
+**BY PRESSING A BUTTON ON THIS MACHINE, YOU AGREE TO THE FOLLOWING:**
+1. **YOU'RE ON THE HOOK NOW.**
+   Thought you were just buying a snack? Think again. By selecting your favorite overpriced beverage, you're also agreeing to hand over your time, patience, and possibly a portion of your sanity. Don't worry, though, the chips are pretty good.
+2. **NO REFUNDS, EVER.**
+   The snack you receive is the snack you deserve. If the machine decides to give you that crumpled bag of air that technically has 4.5 chips inside, you accept this as your fate. Trying to shake the machine? Nice try, but you might end up shaking your dignity loose instead.
+3. **THE MACHINE IS ALWAYS RIGHT.**
+   The vending machine
+s choices are final. Pressed "D7" for chips, but got "F12" for a questionable energy drink? That
+s destiny, my friend. The machine knows what you really need, and no, it won
+t explain itself.
+4. **YOUR SELECTION DATA IS NOW OURS.**
+   By choosing that sugary snack, you
+ve also shared your innermost snack preferences with us. We will quietly analyze your choices to figure out whether you
+re a salty person, a sweet person, or just someone who panic-buys snacks at 2 AM.
+5. **PRICE CHANGES MAY BE RIDICULOUS.**
+   We reserve the right to randomly adjust prices without notice. One day your favorite snack costs $1, and the next day, it
+s $3.75. Why? Because we can. Don't act surprised if the cost of that candy bar suddenly rivals a small country
+s GDP.
+6. **THE SNACK YOU WANT IS PROBABLY SOLD OUT.**
+   The item that looks the most appealing is probably the one the machine "accidentally" ran out of. You
+ll have to settle for something weird, like kale chips. Better luck next time.
+7. **IF IT GETS STUCK, THAT'S ON YOU.**
+   If your snack dangles precariously, just out of reach, we advise you to take a deep breath and accept your new reality. Attempting to shake, kick, or sweet-talk the machine into cooperating will result in failure (and possibly injury). This is your life now.
+8. **UPDATES WILL HAPPEN MID-TRANSACTION.**
+   There
+s a slight chance we
+ll decide to update this machine
+s software right as you
+re craving that soda. This will inevitably happen at the most inconvenient moment. Your snack will remain trapped in limbo while we enjoy a nice cup of coffee in the background.
+9. **WE CAN WATCH YOU, BUT DON'T WORRY, IT'S CREEPY FOR US TOO.**
+   This machine might be equipped with sensors, cameras, or, for all you know, the ability to read minds. But let
+s be honest: We
+re just as uncomfortable with that as you are. Just pretend we
+re not watching, and we
+ll pretend not to know how often you snack.
+10. **MALFUNCTIONS ARE 'FEATURES.'**
+    Should the machine completely glitch out and dispense 17 packs of gum instead of one soda, consider yourself lucky. That
+s not a bug, it
+s a 
+generosity feature
+ that we don
+t plan on fixing anytime soon.
+#### **IN SUMMARY:**
+- You
+re agreeing to a lifelong bond with this vending machine.
+- You will receive snacks, but not necessarily the ones you wanted or at the price you expected.
+- The machine knows all, sees all, and rarely feels like apologizing for its behavior.
+Thank you for your cooperation, and may the odds be ever in your flavor!
+Sincerely,
+The Vending Machine Overlords and Their Lawyers
+h>s@
+     
+#+$+%+y
+ S1     *01
+/_?O0
+f'w'
+8.D$C
+?OOO_
+"P1     9
+N__O$
+N__O
+"P1
+Q,A,
+E^_Oi
+,!,1,
+$".h
+,C,6
+$-)~B.
+pX.C
+aPp@
+aPp@
+'(0Q
+F/Gp@]A
+F/Op@]J3
+papfuarddsnrfzxuatghnxlvlayblyhxsfrfqpcsfvhpgkakzlxvy
+arupgvxlyyrwqnberpv
+Current memory locations
+Unacceptable index
+MEMORY LOCATION TO PRINT
+DEVELOPMENT MENU
+List Memory locations
+Dump Memory location
+Connecting to the C&C
+Password: 
+Wrong password
+OTP: 
+Incorrect OTP, got 
+, was expecting 
+CONGRATULATIONS! You have successfully connected to the C&C
+Here is the final secret: 
+TODO: Replace this with actual connection to C&C
+Signed-By: Dan
+Press Enter to stop
+Dumping Interrupted
+Dumping Interrupted %d %d
+Finished dumping
+Enter password for vending machine number 
+Logged in as 
+Login failure
+PROGMEM: Flash memory for large data
+EEPROM: Memory for data storage
+SRAM: Memory for runtime
+Developer Dan
+danprzjzumfgn
+Admin Alan
+alancywupdjmydfadoaqvshshkgucnfwvvoqhjbxrdgndhfmhryjzn
+(/)Z
+(/ ]
+!P0@
+!P0@
+/_?O
+O__OF
+/_?O0
+O__OF
