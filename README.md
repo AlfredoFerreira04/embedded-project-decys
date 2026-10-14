@@ -73,21 +73,31 @@ Based on the repeatable timing discontinuity at 13 characters, the developer pas
 
 **Relevant Artifacts:**
 
-//to-do
+All artifacts for this target are located under [./TARGETS/target-3/](./TARGETS/target-3/).
+
+- Annotated Asset List: [asset_list.md](./TARGETS/target-3/asset_list.md)
+- Full Strings Output: [full_strings_output.txt](./TARGETS/target-3/full_strings_output.txt)
+  - Shell Script: [strings.sh](./TARGETS/target-3/strings.sh) (used to obtain full strings output from [binaries](./TARGETS/target-2/memory_dumps))
 
 **Explanation:**
 
-//to-do: describe the relevant compilation/invocation for the relevant code used to extract information
+To obtain the byte offsets:
+rita@LAPTOP-UFF3P787:/mnt/c/Users/micro/Documents/ISEP/MESCC/2ANO/DECYS/embedded-lab-1/embedded-project-decys/TARGETS/target-2$ grep -obUaP "danprzjzumfgn" memory_dumps_old/memory_0.bin
+862:danprzjzumfgn
+27977:danprzjzumfgn
+rita@LAPTOP-UFF3P787:/mnt/c/Users/micro/Documents/ISEP/MESCC/2ANO/DECYS/embedded-lab-1/embedded-project-decys/TARGETS/target-2$ grep -obUaP "alancywupdjmydfadoaqvshshkgucnfwvvoqhjbxrdgndhfmhryjzn"  memory_d
+umps_old/memory_0.bin
+28006:alancywupdjmydfadoaqvshshkgucnfwvvoqhjbxrdgndhfmhryjzn
 
 **Questions:**
 
-    **1. What is the second maintenance password?**
+  **1. What is the second maintenance password?**
 
-    **Answer:** *To-do*
+  **Answer:** `alancywupdjmydfadoaqvshshkgucnfwvvoqhjbxrdgndhfmhryjzn`
 
-    **2.  What byte offset does it sit relative to the developer password, and how long are the base64 blobs?**
+  **2.  What byte offset does it sit relative to the developer password, and how long are the base64 blobs?**
 
-    **Answer:** *To-do*
+  **Answer:** +29bytes. In `memory_0.bin`, `danprzjzumfgn` starts at offset 27977 and Alan’s password starts at offset 28006.
 
 ## Part II
 
@@ -97,4 +107,4 @@ Based on the repeatable timing discontinuity at 13 characters, the developer pas
 
 ### Target 6: Crack the OTP generator
 
-### Target 6: Final secret
+### Target 7: Final secret
